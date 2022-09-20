@@ -1,5 +1,6 @@
-n = int(input())
-if (n%4==0 and n%100!=0) or n % 400==0:
-    print('Високосный')
-else:
-    print('Обычный')
+a= int(input())
+b= int(input())
+c=int(input())
+p=(a+b+c)/2
+S =((p*(p-a)*(p-b)*(p-c))**0.5)
+print(S)
