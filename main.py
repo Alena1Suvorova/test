@@ -1,6 +1,5 @@
 a= int(input())
-b= int(input())
-c=int(input())
-p=(a+b+c)/2
-S =((p*(p-a)*(p-b)*(p-c))**0.5)
-print(S)
+if (a>-15 and a<=12) or (a>14 and a<17) or a>=19:
+    print('True')
+else:
+    print('False')
