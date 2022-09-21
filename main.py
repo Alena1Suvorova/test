@@ -1,27 +1,21 @@
-a=float(input())
-b=float(input())
-c=input()
-if c =='+':
-  print(a+b)
-elif c =='-':
-    print(a-b)
-elif c=='*':
-    print(a*b)
-elif c=='/':
-    if b!=0 :
-        print(a/b)
-    else: print('Деление на 0!')
-elif c=='mod':
-   if b!=0 :
-       print(a%b)
-   else:  print('Деление на 0!')
-elif c=='pow':
-    print(a**b)
-elif c=='div':
-    if b != 0:
-        print(a//b)
-    else:
-        print('Деление на 0!')
+h=input()
+if h=='треугольник':
+    a = float(input())
+    b = float(input())
+    c = float(input())
+    p=(a+b+c)/2
+    S=(p*(p-a)*(p-b)*(p-c))**0.5
+    print(S)
+elif h=='прямоугольник':
+    a = float(input())
+    b = float(input())
+    S = a * b
+    print(S)
+elif h=='круг':
+    r = float(input())
+    S = 3.14*(r**2)
+    print(S)
 else:
-    print('нет такой операции')
+    print()
+
 
