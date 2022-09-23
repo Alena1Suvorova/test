@@ -39,6 +39,14 @@ elif (a<=b and a>=c) or (a<=c and a>=b):
     print(a)
 elif (c>=a and c<=b) or (c>=b and c<=a):
     print(c)
+    # sklonenie
+    a = int(input())
+    if (a == 1 or a % 10 == 1) and a % 100 != 11:
+        print(a, 'программист')
+    elif (a in (2, 3, 4) or a % 10 in (2, 3, 4)) and a % 100 not in (12, 13, 14):
+        print(a, 'программиста')
+    else:
+        print(a, 'программистов')
 
 
 
