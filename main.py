@@ -1,7 +1,7 @@
-a = 7
-b = 10
-c = 5
-d = 6
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
 for j in range(c, d+1):
     print('\t', j, end='')
 for i in range(a, b+1):
@@ -9,6 +9,7 @@ for i in range(a, b+1):
     print(i, end='')
     for j in range(c, d+1):
         print('\t', i * j, end='')
+
 
 
 
