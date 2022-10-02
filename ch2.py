@@ -24,3 +24,19 @@ while i <= 100:
     if i < 10 or i > 100:
         continue
     print(i)
+
+#2.3
+a = int(input())
+b = int(input())
+
+s = 0
+m = 0
+for i in range(a, b+1):
+    if i % 3 == 0:
+        s += i
+        m += 1
+print(s/m)
+2.4
+s = input().upper()
+G = (s.count('G') + s.count('C')) / len(s)
+print(G * 100)
