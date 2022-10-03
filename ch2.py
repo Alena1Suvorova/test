@@ -40,3 +40,18 @@ print(s/m)
 s = input().upper()
 G = (s.count('G') + s.count('C')) / len(s)
 print(G * 100)
+
+2.5
+a = input()+' '
+i = 0
+s = 0
+
+for i in range(len(a)-1):
+    if a[i] == a[i+1]:
+        i += 1
+        s += 1
+    else:
+        a[i] != a[i+1]
+        k = str(s+1)
+        print(a[i]+k, end="")
+        s = 0
