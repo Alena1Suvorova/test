@@ -55,3 +55,6 @@ for i in range(len(a)-1):
         k = str(s+1)
         print(a[i]+k, end="")
         s = 0
+# 2.5 списки
+a = [int(i) for i in input().split()]
+print(sum(a))
