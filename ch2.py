@@ -58,3 +58,14 @@ for i in range(len(a)-1):
 # 2.5 списки
 a = [int(i) for i in input().split()]
 print(sum(a))
+
+# 2.5.2
+a = [(int(i)) for i in input().split()]
+if len(a)-1 == 0:
+    print(a[0])
+else:
+    for i in range(len(a)-1):
+        s = a[i-1]+a[i+1]
+        i += 1
+        print(s, '', end='')
+    print(a[0]+a[i-1])
