@@ -69,3 +69,18 @@ else:
         i += 1
         print(s, '', end='')
     print(a[0]+a[i-1])
+# 2.5.3 убрать повторы из списка
+a, j = [(int(i)) for i in input().split()], []
+b = a.sort()
+c = ''
+for i in range(len(a)):
+    if c != a[i]:
+        c = a[i]
+        i += 1
+    elif a[i] not in j:
+        j.append(a[i])
+        print(a[i], '', end='')
+# 2.5.3   2 вариант
+s = input().split()
+a = [int(i) for i in set(s) if s.count(i) > 1]
+print(*a)
