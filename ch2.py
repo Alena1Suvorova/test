@@ -101,3 +101,12 @@ for i in range(1, n+1):
             break
         k += 1
         print(i, ' ', end='')
+# 2.6.3
+lst = [int(i) for i in input().split()]
+x = int(input())
+if lst.count(x) > 0:
+    for i in range(len(lst)):
+        if lst[i] == x:
+            print(i, '', end='')
+else:
+    print('Отсутствует')
