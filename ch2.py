@@ -84,3 +84,20 @@ for i in range(len(a)):
 s = input().split()
 a = [int(i) for i in set(s) if s.count(i) > 1]
 print(*a)
+n = int(input())
+k = 0
+for i in range(1, n+1):
+    for j in range(i):
+        if k >= n:
+            break
+        k += 1
+        print(i, ' ', end='')
+# 2.6.2
+n = int(input())
+k = 0
+for i in range(1, n+1):
+    for j in range(i):
+        if k >= n:
+            break
+        k += 1
+        print(i, ' ', end='')
