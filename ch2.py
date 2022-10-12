@@ -110,3 +110,25 @@ if lst.count(x) > 0:
             print(i, '', end='')
 else:
     print('Отсутствует')
+
+#2.6.4 матрица
+import copy
+
+a = []
+
+while True:
+    s = input()
+    if s == 'end':
+        break
+    r = [int(i) for i in s.split()]
+    a.append(r)
+
+b = copy.deepcopy(a)
+l = len(a[0])
+s = len(a)
+
+for i, row in enumerate(a):
+    for j, elem in enumerate(row):
+        b[i][j] = a[i - 1][j] + a[i + 1 - s][j] + a[i][j - 1] + a[i][j + 1 - l]
+        print(b[i][j], end=' ')
+    print()
