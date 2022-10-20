@@ -124,11 +124,34 @@ while True:
     a.append(r)
 
 b = copy.deepcopy(a)
-l = len(a[0])
+l2 = len(a[0])
 s = len(a)
 
 for i, row in enumerate(a):
     for j, elem in enumerate(row):
-        b[i][j] = a[i - 1][j] + a[i + 1 - s][j] + a[i][j - 1] + a[i][j + 1 - l]
+        b[i][j] = a[i - 1][j] + a[i + 1 - s][j] + a[i][j - 1] + a[i][j + 1 - l2]
         print(b[i][j], end=' ')
     print()
+
+    # матрица по спирали
+n = int(input())
+a = [[0] * n for i in range(n)] # empty matrix
+i = 0  # current index
+j = 0  # current index
+p = 1
+s = 0
+
+while p <= n*n:
+    for j in range(s, n-s, 1):
+        a[i][j] = p
+        p += 1
+    for i in range(s + 1, n-s, 1):
+        a[i][j] = p
+        p += 1
+    for j in range(n-s-2, s-1, -1):
+        a[i][j] = p
+        p += 1
+    for i in range(n-s-2, s, -1):
+        a[i][j] = p
+        p += 1
+    s += 1
