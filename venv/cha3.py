@@ -5,7 +5,7 @@ def fan(x):
     if x <= -2:
         s = 1 - ((x+2)**2)
     elif x > -2 and x<= 2:
-        s =-x/2
+        s = -x/2
     elif x > 2:
         s = ((x - 2) ** 2) + 1
     return s
@@ -20,3 +20,18 @@ def modify_list(l):
             l[j] = l[j]//2
 
 modify_list(lst)
+
+# словари
+x = {2: [-1]}
+def update_dictionary(d, key, value):
+    if key in d:
+        d[key].append(value)
+    elif key * 2 in d:
+        d[key * 2].append(value)
+    else:
+        d[key * 2] = [value]
+
+update_dictionary(x, 2, 9)
+update_dictionary(x, 1, 5)
+update_dictionary(x, 3, -3)
+print(x)
