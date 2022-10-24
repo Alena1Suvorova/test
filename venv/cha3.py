@@ -35,3 +35,47 @@ update_dictionary(x, 2, 9)
 update_dictionary(x, 1, 5)
 update_dictionary(x, 3, -3)
 print(x)
+# кол-во слов в строке
+a = input().lower().split()
+slovar = dict()
+
+for sl in a:
+    if sl not in slovar:
+        slovar[sl] = 1
+    else:
+        slovar[sl] += 1
+for key in slovar:
+    print(key, slovar[key])
+
+# Кеш Считайте, что функция f(x) уже определена выше. Определять её отдельно не требуется.
+n = int(input())
+slovar = dict()
+for i in range(n):
+    x = int(input())
+    if x in slovar:
+        print(slovar[x])
+    else:
+        a = f(x)
+        slovar[x] = a
+        print(slovar[x])
+# файлы
+def preob_strok(sdo):
+    a = sdo + ' '
+    num = ''
+    b = sdo[0]
+    c = ''
+    for i, st in enumerate(a):
+        if st.isnumeric() == False:
+            if num != '':
+                c += (b * int(num))
+                b = st
+                num = ''
+        if st.isnumeric() == True:
+            num += st
+    return c
+
+with open('test.txt') as inf:
+    s = inf.readline()
+    output = preob_strok(s)
+    with open('otvet.txt', 'w') as f:
+        f.write(output)
